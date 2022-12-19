@@ -11,11 +11,19 @@ import NearMeIcon from "@material-ui/icons/NearMe";
 import NoteIcon from "@material-ui/icons/Note";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import { Duo, Person, Phone } from "@material-ui/icons";
+import { useDispatch } from "react-redux";
+import { openSendMessage } from "../../features/mailSlice";
 
 const SideBar = () => {
+  const dispatch = useDispatch();
+
   return (
     <div className="sidebar">
-      <Button startIcon={<AddIcon />} className="sidebar_compose">
+      <Button
+        startIcon={<AddIcon />}
+        className="sidebar_compose"
+        onClick={() => dispatch(openSendMessage())}
+      >
         Compose
       </Button>
       <SideBarOptions

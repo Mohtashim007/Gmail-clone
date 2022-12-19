@@ -3,6 +3,14 @@
   overflow: scroll;
 }
 
+.maillist::-webkit-scrollbar {
+  display: none;
+}
+
+.maillist_list {
+  padding-bottom: 20%;
+}
+
 .maillist_setting {
   display: flex;
   justify-content: space-around;
